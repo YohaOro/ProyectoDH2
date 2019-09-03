@@ -1,0 +1,15 @@
+*{
+ margin: 0 auto;
+}
+header{
+  background-color: black;
+  text-align: left;
+
+}
+
+footer{
+  background-color: green;
+}
+h4{
+  text-align: left;
+}
