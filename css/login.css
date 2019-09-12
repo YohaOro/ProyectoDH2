@@ -1,4 +1,7 @@
-
+*{
+ margin: 0 auto;
+ box-sizing: border-box;
+}
 .y-marca {
     font-family: 'Faster One', cursive;
     font-size: 2rem;
@@ -9,4 +12,20 @@
 }
 a:hover {
     color: antiquewhite;
+}
+body{
+  background-color: black;
+}
+.contenedor{
+  background-color: black;
+  margin-bottom: 80px;
+}
+.login{
+  border-style: solid;
+  border-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  max-width: 550px;
+  margin-top: 50px;
+  text-align: center;
 }
