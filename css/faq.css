@@ -10,3 +10,31 @@
 a:hover {
     color: antiquewhite;
 }
+.nav-pills .nav-link.active, .nav-pills .show .nav-link {
+    background-color: rgba(255, 144, 0, 0.6);
+    border-color: rgb(255, 144, 0);
+}
+
+.nav-link:hover {
+    color:rgb(255, 144, 0);
+}
+
+.nav-link{
+    color:rgb(52, 73, 94 );
+    font-weight: bolder;
+}
+
+h1 {
+    color:rgb(52, 73, 94 );
+}
+
+.btn-link {
+    color: rgb(52, 73, 94 );
+    font-weight: bolder;
+    text-combine-upright: none;
+}
+
+.btn-link:hover{
+    color:rgb(255, 144, 0);
+    text-decoration: none;
+}
