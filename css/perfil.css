@@ -11,8 +11,8 @@ a:hover {
     color: antiquewhite;
 }
 
-header{
-    text-color:rgb(52, 73, 94 );
+header {
+    color:rgb(52, 73, 94 );
 }
 
 input:focus, input[type]:focus {
