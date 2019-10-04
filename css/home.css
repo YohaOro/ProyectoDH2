@@ -1,16 +1,4 @@
 
-.y-marca {
-    font-family: 'Faster One', cursive;
-    font-size: 2rem;
-}
-
-.y-textcolor{
-   color : rgba(255,255,255,.5);
-}
-a:hover  {
-    color: antiquewhite;
-}
-
 .y_titulo {
     text-decoration: none;
     color: black;
@@ -26,7 +14,7 @@ a:hover  {
 }
 
 .y_comprar:hover {
-    color:rgba(255, 255, 0, 0.767);
+    color: rgb(255, 144, 0);
 }
 
 .fas:hover{

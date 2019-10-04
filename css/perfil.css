@@ -1,16 +1,4 @@
 
-.y-marca {
-    font-family: 'Faster One', cursive;
-    font-size: 2rem;
-}
-
-.y-textcolor{
-   color : rgba(255,255,255,.5);
-}
-a:hover {
-    color: antiquewhite;
-}
-
 header {
     color:rgb(52, 73, 94 );
 }

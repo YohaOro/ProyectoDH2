@@ -11,11 +11,9 @@ html,body{
 }
 
 .card{
-    height: 370px;
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
 }
-
 .input-group-prepend span{
     background-color:rgb(255, 144, 0);
     border:0 !important;

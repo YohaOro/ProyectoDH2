@@ -1,25 +1,14 @@
 
-.y-marca {
-    font-family: 'Faster One', cursive;
-    font-size: 2rem;
-}
-
-.y-textcolor{
-   color : rgba(255,255,255,.5);
-}
-a:hover {
-    color: antiquewhite;
-}
-.nav-pills .nav-link.active, .nav-pills .show .nav-link {
+.nav-pills .y-nav-link.active, .nav-pills .show .y-nav-link {
     background-color: rgba(255, 144, 0, 0.6);
     border-color: rgb(255, 144, 0);
 }
 
-.nav-link:hover {
+.y-nav-link:hover {
     color:rgb(255, 144, 0);
 }
 
-.nav-link{
+.y-nav-link{
     color:rgb(52, 73, 94 );
     font-weight: bolder;
 }
@@ -28,13 +17,12 @@ h1 {
     color:rgb(52, 73, 94 );
 }
 
-.btn-link {
+h5 .btn-link {
     color: rgb(52, 73, 94 );
     font-weight: bolder;
-    text-combine-upright: none;
 }
 
-.btn-link:hover{
+h5 .btn-link:hover{
     color:rgb(255, 144, 0);
     text-decoration: none;
 }

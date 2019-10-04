@@ -1,53 +1,6 @@
-*{
- margin: 0 auto;
- box-sizing: border-box;
+input:focus, input[type]:focus, textarea:focus {
+  border-color: rgb(255, 144, 0);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+  outline: 0 none;
 }
 
-.y-marca {
-  font-family: 'Faster One', cursive;
-  font-size: 2rem;
-}
-
-.y-textcolor{
- color : rgba(255,255,255,.5);
-}
-a:hover {
-  color: antiquewhite;
-}
-
-header{
-  background-color: black;
-
-}
-.marca{
-  background-color: red;
-}
-footer{
-  background-color: green;
-}
-h4{
-  text-align: left;
-}
-.formuulario{
-  border-style: solid;
-  border-color: black;
-  max-width: 550px;
-}
-.mapa{
-width: 100%S;
-}
-h1{
-  margin: 15px;
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Lobster', cursive;
-  font-size: 45px;
-}
-
-h2{
-  margin: 15px;
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Lobster', cursive;
-  font-size: 45px;
-}

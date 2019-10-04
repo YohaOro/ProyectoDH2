@@ -1,3 +1,14 @@
+<?php
+  require_once("../controladores/funciones.php");
+  require_once("../controladores/helpers.php");
+ 
+  if(!isset($_SESSION["email"])) {
+   header("location:login.php");
+    exit;
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,59 +22,25 @@
     <title>Perfil Usuario</title>
 </head>
 <body>
-    <header>
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand y-marca" href="#">CIPRÉS</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/xampp/htdocs/proyectoDh/html/home.html#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/xampp/htdocs/proyectoDh/html/contact.html#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/xampp/htdocs/proyectoDh/html/productos.html#">Productos</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav my-2 my-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/xampp/htdocs/proyectoDh/html/signin.html#">Sign in </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/xampp/htdocs/proyectoDh/html/login.html#">Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="file:///C:/xampp/htdocs/proyectoDh/html/carrito.html#"><i class="fas fa-shopping-cart"></i></a> 
-                        </li>
-                    </ul> 
-                </div>   
-            </nav>
-        </div>
-    </header>
+    <?php include_once("nav.php");?>
     <br>
     <div class="container ">
         <div class="row">
-            <div class="col-sm-10"><h1>Tu Perfil</h1></div> 
+            <div class="col-sm-10"><h1>Bienvenid@ <?=$_SESSION['nombre'] ;?></h1></div> 
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <div class="text-center">
-                    <img src="../img/user.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
+                <div class="text-center style="width: 18rem;" >
+                    <img src="../imagenes/<?=$_SESSION['avatar'];?>" class="card-img-top" alt="avatar">
                     <h6 class="pt-3">Subí tu foto de perfil...</h6>
                     <input type="file" class="form-control-file ">
                 </div>
             </div>
             <div class="col-sm-9">
                 <ul class="nav ">
-                    <li class="nav-item"><a class="nav-link active" href="../html/perfil.html"><h4><b> Mi Perfil</b></h4></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../html/carrito.html"><h4><b>Mi Carrito</b></h4></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../html/carrito.html"><h4><b>Mis Favoritos</b></h4></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="perfil.php"><h4><b> Mi Perfil</b></h4></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carrito.php"><h4><b>Mi Carrito</b></h4></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carrito.php"><h4><b>Mis Favoritos</b></h4></a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="home">
@@ -105,7 +82,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="email"><h4>Email</h4></label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="" title="">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" title="">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -135,54 +112,8 @@
         </div>
     </div>
     <br>
-      
-    <footer class="page-footer font-small bg-dark y-textcolor ">
-        <div class="container">
-            <div class="row text-center d-flex justify-content-center pt-4 mb-2">
-                <div class="col-md-2 mb-3">
-                    <h6 class="aria-controls ">
-                        <a class="text-decoration-none y-textcolor" href="file:///C:/xampp/htdocs/proyectoDh/html/faq.html#"> Preguntas Frecuentes</a>
-                    </h6>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="aria-controls">
-                        <a class="text-decoration-none y-textcolor" href="file:///C:/xampp/htdocs/proyectoDh/html/productos.html#">Productos</a>
-                    </h6>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="aria-controls">
-                        <a class="text-decoration-none y-textcolor" href="file:///C:/xampp/htdocs/proyectoDh/html/contact.html#">Contactanos</a>
-                    </h6>
-                </div>   
-            </div>
-            <hr class="rgba-dark-dark" style="margin: 0 15%;">
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-2">
-                <div class="col-md-8 col-12 mt-2 aria-controls">
-                    <p style="line-height: 1.7rem">Ciprés es un proyecto que nace por la pasion de andar libre y seguro sobre ruedas.<br/> Queremos brindarte el mejor asesoramiento para que puedas llevarte más que una bici nueva, la experiencia y la comodidad que te mereces.</p>
-                </div>
-            </div>
-            <hr class="clearfix d-md-none rgba-dark-dark" style="margin: 10% 15% 5%;">
-            <div class="row pb-3">
-                <div class="col-md-12">
-                    <div class="mb-2 flex-center ">
-                        <a class="text-decoration-none y-textcolor" href="https://www.facebook.com">
-                            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
-                        </a>
-                        <a class="text-decoration-none y-textcolor" href="https://twitter.com">
-                            <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
-                        </a>
-                        <a class="text-decoration-none y-textcolor" href="https://www.google.com">
-                            <i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
-                        </a>
-                        <a class="text-decoration-none y-textcolor" href="https://www.instagram.com">
-                            <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
-                        </a>   
-                    </div> 
-                </div>
-            </div>
-            
-        </div>   
-    </footer>
+    <?php include_once("footer.php");?>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

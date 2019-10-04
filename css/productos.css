@@ -1,17 +1,4 @@
 
-.y-marca {
-    font-family: 'Faster One', cursive;
-    font-size: 2rem;
-}
-
-.y-textcolor{
-   color : rgba(255,255,255,.5);
-}
-a:hover {
-    color: antiquewhite;
-}
-
-
 .demo{padding:45px 0}
 .product-grid2 {
     font-family:'Open Sans',sans-serif;position:relative; margin-top: 15%;
